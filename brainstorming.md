@@ -3,9 +3,11 @@
 PART 3 - Improving the frontend
 
 If battery temp drops below 20 degrees, change text to blue
+
 If battery temp drops below 10 degrees, make text flash in blue
 
 If battery temp rises above 80 degrees, change text to red
+
 If battery temp rises above 90 degrees, make text flash red
 
 Add a light mode theme (basically invert background and text colour)

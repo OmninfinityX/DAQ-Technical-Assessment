@@ -5,10 +5,18 @@
 If battery temp drops below 20 degrees, change text to blue
 
 If battery temp drops below 10 degrees, make text flash in blue
+͏
+
+
+͏
 
 If battery temp rises above 80 degrees, change text to red
 
 If battery temp rises above 90 degrees, make text flash red
+
+
+͏
+
 
 
 
@@ -22,10 +30,16 @@ Add a indicator (green/red dot) that shows if localhost:3000 is connected to the
 
 
 
+
+͏
+
 Add settings where you can:
 - change the unit of temperature (degrees (default), fahrenheit, Kelvin)
 - change the number of decimal points to display
 - change the size of the font (I guess ctrl + + or ctrl + - does that)
+
+
+͏
 
 
 **Other**

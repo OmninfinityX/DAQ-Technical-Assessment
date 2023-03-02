@@ -1,0 +1,30 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Linting
+        run: npm run lint # Replace with the command for your linting tool
+
+      - name: Unit testing
+        run: npm run test # Replace with the command for your unit testing tool
+
+      - name: Build and push Docker images
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }} # Replace with Docker Hub username
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }} # Replace with Docker Hub access token or password
+          IMAGE_NAME: your-image-name # Replace "your-image-name" with the actual name of your Docker image
+        run: |
+          docker build -t $IMAGE_NAME .
+          echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+          docker tag $IMAGE_NAME $DOCKER_USERNAME/$IMAGE_NAME
+          docker push $DOCKER_USERNAME/$IMAGE_NAME

@@ -46,6 +46,6 @@ Add settings where you can:
 
 Add a loading screen? That seamlessly transitions to the main screen?
 
-Show the temp of other elements that heat up, i.e. brake rotors, DC motors, tire
+Show the temp of other elements that heat up, i.e. brake rotors, brake fluid, DC motors, tire
 
 Could even have a heat map of the battery if we had multiple sensors/ir camera as sensors

@@ -4,8 +4,8 @@ import RedbackLogo from './redback_logo.jpg';
 import './App.css';
 
 function App() {
-
   const [temperature, setTemperature] = useState<number>(0);
+  const [isLightTheme, setIsLightTheme] = useState<boolean>(false); // new state variable
 
   const ws: any = useRef(null);
 
@@ -34,14 +34,21 @@ function App() {
     };
   }, []);
 
+  const toggleTheme = () => {
+    setIsLightTheme(!isLightTheme);
+  }
+
   return (
-    <div className="App">
+    <div className={`App ${isLightTheme ? "light-theme" : ""}`}>
       <header className="App-header">
-      <img src={RedbackLogo} className="redback-logo" alt="Redback Racing Logo"/>
+        <img src={RedbackLogo} className="redback-logo" alt="Redback Racing Logo"/>
         <p className='value-title'>
           Live Battery Temperature
         </p>
         <LiveValue temp={temperature}/>
+        <button className="theme-button" onClick={toggleTheme}>
+          Light theme
+        </button>
       </header>
     </div>
   );

@@ -24,7 +24,7 @@ Add a light mode theme (basically invert background and text colour)
 
 Add a graph that tracks and records temperature over time
 
-Add a feature that shows peak temperature, lowest temperature and average temperature
+Add a feature that shows peak temperature, lowest temperature and average temperature, and add a reset button that refreshes/clears the value
 
 Add a indicator (green/red dot) that shows if localhost:3000 is connected to the streaming service
 

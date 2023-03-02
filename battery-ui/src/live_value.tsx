@@ -5,14 +5,21 @@ interface TemperatureProps {
   temp: number;
 }
 
-function LiveValue({ temp } : TemperatureProps) {
+function LiveValue({ temp }: TemperatureProps) {
+  let valueColour: string;
 
-  let valueColour = 'white';
+  if (temp < 20) {
+    valueColour = 'blue';
+  } else if (temp > 80) {
+    valueColour = 'red';
+  } else {
+    valueColour = 'green';
+  }
 
   return (
-      <header className="live-value" style={{ color : valueColour }}>
-        {`${temp.toString()}°C`}
-      </header>
+    <header className="live-value" style={{ color: valueColour }}>
+      {`${temp.toString()}°C`}
+    </header>
   );
 }
 

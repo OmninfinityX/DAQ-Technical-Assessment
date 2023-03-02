@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #000000;
+  background-color: black;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,36 @@
   padding-top: 5%;
 }
 
-.value-title {
-  font-size: calc(25px + 2vmin);
+.light-theme {
+  background-color: white !important;
+  color: #000000;
 }
 
+.value-title {
+  font-size: calc(40px + 2vmin);
+  font-weight: bold;
+  margin: 0;
+  color: black;
+  padding: 5%;
+}
+
+.light-theme .value-title {
+  color: white;
+}
+
+.light-theme .theme-button {
+  background-color: white;
+  color: black;
+}
+
+.theme-button {
+  position: absolute;
+  top: 10px; /* adjust this value to position the button vertically */
+  right: -40px; /* adjust this value to position the button horizontally */
+  transform: translate(-50%, 0); /* center the button horizontally */
+  font-size: 16px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
